@@ -50,7 +50,7 @@ group functions
 
 
 13) select staff_name,staff_salary,d.deptcode,d.deptname from staff_master,dept_master d where staff_salary>20000;
-'rk
+
 14) select staff code,staff name,staff sal from staff master where staff sal>(select avg(staff sal)from staff master);
  
 
@@ -58,7 +58,7 @@ group functions
 
 16)select s.staff_code, s.staff_name, b.book_code, b.book_name, bb.book_issue_date, d.design_name, dm.dept_name from staff_master s, book_master b, book_transactions bb, designation_master d, department_master dm whee s.staff_code=bb.staff_code and b.book_code=bb.book_code and sysdate-30<= bb.ook_issue_date;
 
-18) select staff code,staff name,staff sal from staff master where staff sal>(select avg(staff sal)from staff master);
+18)
 
 19) select book_pub_author, book_name fro book_master where book_pub_author in(select book_pub_author from book_master group by book_pub_author having count(book_pub_author)>1);
 
